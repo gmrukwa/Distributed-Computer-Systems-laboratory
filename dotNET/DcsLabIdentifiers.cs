@@ -35,7 +35,7 @@
 ** The complete license agreement can be found here:
 ** http://unifiedautomation.com/License/SLA/2.6/
 **
-** Created: 12.12.2017
+** Created: 13.12.2017
 **
 ******************************************************************************/
 
@@ -66,6 +66,11 @@ namespace PolslMacrocourse.DcsLab
     [System.CodeDom.Compiler.GeneratedCodeAttribute("UaModeler", "1.5.2")]
     public static partial class Objects
     {
+        /// <summary>
+        /// The identifier for the UA_1_1 Object.
+        /// </summary>
+        public const uint UA_1_1 = 5002;
+
     }
     #endregion
 
@@ -166,6 +171,56 @@ namespace PolslMacrocourse.DcsLab
         /// </summary>
         public const uint StationType_TIMEOUT = 6010;
 
+        /// <summary>
+        /// The identifier for the ALARM Object.
+        /// </summary>
+        public const uint UA_1_1_ALARM = 6011;
+
+        /// <summary>
+        /// The identifier for the BLOCKED Object.
+        /// </summary>
+        public const uint UA_1_1_BLOCKED = 6012;
+
+        /// <summary>
+        /// The identifier for the CYCLE_TIME Object.
+        /// </summary>
+        public const uint UA_1_1_CYCLE_TIME = 6013;
+
+        /// <summary>
+        /// The identifier for the EMPTY Object.
+        /// </summary>
+        public const uint UA_1_1_EMPTY = 6014;
+
+        /// <summary>
+        /// The identifier for the EXCLUDED Object.
+        /// </summary>
+        public const uint UA_1_1_EXCLUDED = 6015;
+
+        /// <summary>
+        /// The identifier for the INTERVENTION Object.
+        /// </summary>
+        public const uint UA_1_1_INTERVENTION = 6016;
+
+        /// <summary>
+        /// The identifier for the RUN Object.
+        /// </summary>
+        public const uint UA_1_1_RUN = 6017;
+
+        /// <summary>
+        /// The identifier for the ST_INPUT Object.
+        /// </summary>
+        public const uint UA_1_1_ST_INPUT = 6018;
+
+        /// <summary>
+        /// The identifier for the ST_OUTPUT Object.
+        /// </summary>
+        public const uint UA_1_1_ST_OUTPUT = 6019;
+
+        /// <summary>
+        /// The identifier for the TIMEOUT Object.
+        /// </summary>
+        public const uint UA_1_1_TIMEOUT = 6020;
+
     }
     #endregion
 
@@ -206,6 +261,11 @@ namespace PolslMacrocourse.DcsLab
     [System.CodeDom.Compiler.GeneratedCodeAttribute("UaModeler", "1.5.2")]
     public static partial class ObjectIds
     {
+        /// <summary>
+        /// The identifier for the UA_1_1 Object.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1 = new ExpandedNodeId(Objects.UA_1_1, Namespaces.DcsLab);
+
     }
     #endregion
 
@@ -296,6 +356,56 @@ namespace PolslMacrocourse.DcsLab
         /// </summary>
         public static readonly ExpandedNodeId StationType_TIMEOUT = new ExpandedNodeId(Variables.StationType_TIMEOUT, Namespaces.DcsLab);
 
+        /// <summary>
+        /// The identifier for the UA_1_1_ALARM Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_ALARM = new ExpandedNodeId(Variables.UA_1_1_ALARM, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_BLOCKED Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_BLOCKED = new ExpandedNodeId(Variables.UA_1_1_BLOCKED, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_CYCLE_TIME Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_CYCLE_TIME = new ExpandedNodeId(Variables.UA_1_1_CYCLE_TIME, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_EMPTY Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_EMPTY = new ExpandedNodeId(Variables.UA_1_1_EMPTY, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_EXCLUDED Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_EXCLUDED = new ExpandedNodeId(Variables.UA_1_1_EXCLUDED, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_INTERVENTION Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_INTERVENTION = new ExpandedNodeId(Variables.UA_1_1_INTERVENTION, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_RUN Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_RUN = new ExpandedNodeId(Variables.UA_1_1_RUN, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_ST_INPUT Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_ST_INPUT = new ExpandedNodeId(Variables.UA_1_1_ST_INPUT, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_ST_OUTPUT Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_ST_OUTPUT = new ExpandedNodeId(Variables.UA_1_1_ST_OUTPUT, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the UA_1_1_TIMEOUT Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId UA_1_1_TIMEOUT = new ExpandedNodeId(Variables.UA_1_1_TIMEOUT, Namespaces.DcsLab);
+
     }
     #endregion
 
@@ -363,6 +473,10 @@ namespace PolslMacrocourse.DcsLab
         /// The BrowseName for the TIMEOUT component.
         /// </summary>
         public const string TIMEOUT = "TIMEOUT";
+        /// <summary>
+        /// The BrowseName for the UA_1_1 component.
+        /// </summary>
+        public const string UA_1_1 = "UA_1_1";
     }
     #endregion
 

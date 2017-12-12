@@ -6,6 +6,7 @@
     <Aliases>
         <Alias Alias="Boolean">i=1</Alias>
         <Alias Alias="Byte">i=3</Alias>
+        <Alias Alias="Organizes">i=35</Alias>
         <Alias Alias="HasModellingRule">i=37</Alias>
         <Alias Alias="HasTypeDefinition">i=40</Alias>
         <Alias Alias="HasSubtype">i=45</Alias>
@@ -13,7 +14,7 @@
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="gIgOXs9BqGvli4mWqRFZCg==" Version="1.5.2"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="JALWy4mvCFttwkDkKxlLxQ==" Version="1.5.2"/>
         </Extension>
     </Extensions>
     <UAObjectType IsAbstract="true" NodeId="ns=1;i=1002" BrowseName="1:StationType">
@@ -118,4 +119,91 @@
             <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
         </References>
     </UAObjectType>
+    <UAObject NodeId="ns=1;i=5002" BrowseName="1:UA_1_1">
+        <DisplayName>UA_1_1</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=6011</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6012</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6013</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6014</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6015</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6016</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6017</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6018</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6019</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6020</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">i=2253</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6011" BrowseName="1:ALARM" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>ALARM</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6012" BrowseName="1:BLOCKED" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>BLOCKED</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Byte" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6013" BrowseName="1:CYCLE_TIME" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>CYCLE_TIME</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6014" BrowseName="1:EMPTY" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>EMPTY</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6015" BrowseName="1:EXCLUDED" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>EXCLUDED</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6016" BrowseName="1:INTERVENTION" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>INTERVENTION</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6017" BrowseName="1:RUN" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>RUN</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6018" BrowseName="1:ST_INPUT" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>ST_INPUT</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6019" BrowseName="1:ST_OUTPUT" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>ST_OUTPUT</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6020" BrowseName="1:TIMEOUT" UserAccessLevel="3" AccessLevel="3">
+        <DisplayName>TIMEOUT</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
 </UANodeSet>
