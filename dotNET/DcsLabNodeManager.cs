@@ -53,6 +53,23 @@ namespace PolslMacrocourse.DcsLab
 {
     internal partial class DcsLabNodeManager : BaseNodeManager
     {
+        #region Public Properties
+        /// <summary>
+        /// Gets or sets the index of the instance namespace.
+        /// </summary>
+        /// <value>
+        /// The index of the instance namespace.
+        /// </value>
+        public ushort InstanceNamespaceIndex { get; set; }
+        /// <summary>
+        /// Gets or sets the index of the type namespace.
+        /// </summary>
+        /// <value>
+        /// The index of the type namespace.
+        /// </value>
+        public ushort TypeNamespaceIndex { get; set; }
+        #endregion
+
         #region Constructor
         /// <summary>
         /// Initializes a new instance of the class.
@@ -86,11 +103,15 @@ namespace PolslMacrocourse.DcsLab
             {
                 Console.WriteLine("Starting DcsLabNodeManager.");
 
+                base.Startup();
                 DefaultNamespaceIndex = AddNamespaceUri("http://yourorganisation.org/DCS-lab/");
 
                 Console.WriteLine("Loading the DcsLab Model.");
                 ImportUaNodeset(Assembly.GetEntryAssembly(), "dcs-lab.xml");
 
+                Console.WriteLine("Loading the DcsLab hardcoded instances.");
+                InstanceNamespaceIndex = AddNamespaceUri("http://yourorganisation.com/DCS-lab/");
+                TypeNamespaceIndex = AddNamespaceUri(PolslMacrocourse.DcsLab.Namespaces.DcsLab);
             }
             catch (Exception e)
             {
