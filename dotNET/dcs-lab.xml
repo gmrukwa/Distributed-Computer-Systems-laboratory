@@ -14,7 +14,7 @@
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="JALWy4mvCFttwkDkKxlLxQ==" Version="1.5.2"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="musd2DKf5DP8g3PMe5eGNQ==" Version="1.5.2"/>
         </Extension>
     </Extensions>
     <UAObjectType IsAbstract="true" NodeId="ns=1;i=1002" BrowseName="1:StationType">
@@ -119,8 +119,16 @@
             <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=1002</Reference>
         </References>
     </UAObjectType>
-    <UAObject NodeId="ns=1;i=5002" BrowseName="1:UA_1_1">
-        <DisplayName>UA_1_1</DisplayName>
+    <UAObject NodeId="ns=1;i=5003" BrowseName="1:Controllers">
+        <DisplayName>Controllers</DisplayName>
+        <References>
+            <Reference ReferenceType="Organizes" IsForward="false">i=2253</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5002</Reference>
+        </References>
+    </UAObject>
+    <UAObject NodeId="ns=1;i=5002" BrowseName="1:UA1_1_1">
+        <DisplayName>UA1_1_1</DisplayName>
         <References>
             <Reference ReferenceType="HasComponent">ns=1;i=6011</Reference>
             <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
@@ -133,7 +141,7 @@
             <Reference ReferenceType="HasComponent">ns=1;i=6018</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=6019</Reference>
             <Reference ReferenceType="HasComponent">ns=1;i=6020</Reference>
-            <Reference ReferenceType="Organizes" IsForward="false">i=2253</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5003</Reference>
         </References>
     </UAObject>
     <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6011" BrowseName="1:ALARM" UserAccessLevel="3" AccessLevel="3">

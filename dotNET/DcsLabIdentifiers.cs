@@ -67,9 +67,14 @@ namespace PolslMacrocourse.DcsLab
     public static partial class Objects
     {
         /// <summary>
-        /// The identifier for the UA_1_1 Object.
+        /// The identifier for the Controllers Object.
         /// </summary>
-        public const uint UA_1_1 = 5002;
+        public const uint Controllers = 5003;
+
+        /// <summary>
+        /// The identifier for the UA1_1_1 Object.
+        /// </summary>
+        public const uint Controllers_UA1_1_1 = 5002;
 
     }
     #endregion
@@ -174,52 +179,52 @@ namespace PolslMacrocourse.DcsLab
         /// <summary>
         /// The identifier for the ALARM Object.
         /// </summary>
-        public const uint UA_1_1_ALARM = 6011;
+        public const uint Controllers_UA1_1_1_ALARM = 6011;
 
         /// <summary>
         /// The identifier for the BLOCKED Object.
         /// </summary>
-        public const uint UA_1_1_BLOCKED = 6012;
+        public const uint Controllers_UA1_1_1_BLOCKED = 6012;
 
         /// <summary>
         /// The identifier for the CYCLE_TIME Object.
         /// </summary>
-        public const uint UA_1_1_CYCLE_TIME = 6013;
+        public const uint Controllers_UA1_1_1_CYCLE_TIME = 6013;
 
         /// <summary>
         /// The identifier for the EMPTY Object.
         /// </summary>
-        public const uint UA_1_1_EMPTY = 6014;
+        public const uint Controllers_UA1_1_1_EMPTY = 6014;
 
         /// <summary>
         /// The identifier for the EXCLUDED Object.
         /// </summary>
-        public const uint UA_1_1_EXCLUDED = 6015;
+        public const uint Controllers_UA1_1_1_EXCLUDED = 6015;
 
         /// <summary>
         /// The identifier for the INTERVENTION Object.
         /// </summary>
-        public const uint UA_1_1_INTERVENTION = 6016;
+        public const uint Controllers_UA1_1_1_INTERVENTION = 6016;
 
         /// <summary>
         /// The identifier for the RUN Object.
         /// </summary>
-        public const uint UA_1_1_RUN = 6017;
+        public const uint Controllers_UA1_1_1_RUN = 6017;
 
         /// <summary>
         /// The identifier for the ST_INPUT Object.
         /// </summary>
-        public const uint UA_1_1_ST_INPUT = 6018;
+        public const uint Controllers_UA1_1_1_ST_INPUT = 6018;
 
         /// <summary>
         /// The identifier for the ST_OUTPUT Object.
         /// </summary>
-        public const uint UA_1_1_ST_OUTPUT = 6019;
+        public const uint Controllers_UA1_1_1_ST_OUTPUT = 6019;
 
         /// <summary>
         /// The identifier for the TIMEOUT Object.
         /// </summary>
-        public const uint UA_1_1_TIMEOUT = 6020;
+        public const uint Controllers_UA1_1_1_TIMEOUT = 6020;
 
     }
     #endregion
@@ -262,9 +267,14 @@ namespace PolslMacrocourse.DcsLab
     public static partial class ObjectIds
     {
         /// <summary>
-        /// The identifier for the UA_1_1 Object.
+        /// The identifier for the Controllers Object.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1 = new ExpandedNodeId(Objects.UA_1_1, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers = new ExpandedNodeId(Objects.Controllers, Namespaces.DcsLab);
+
+        /// <summary>
+        /// The identifier for the Controllers_UA1_1_1 Object.
+        /// </summary>
+        public static readonly ExpandedNodeId Controllers_UA1_1_1 = new ExpandedNodeId(Objects.Controllers_UA1_1_1, Namespaces.DcsLab);
 
     }
     #endregion
@@ -357,54 +367,54 @@ namespace PolslMacrocourse.DcsLab
         public static readonly ExpandedNodeId StationType_TIMEOUT = new ExpandedNodeId(Variables.StationType_TIMEOUT, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_ALARM Variable.
+        /// The identifier for the Controllers_UA1_1_1_ALARM Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_ALARM = new ExpandedNodeId(Variables.UA_1_1_ALARM, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_ALARM = new ExpandedNodeId(Variables.Controllers_UA1_1_1_ALARM, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_BLOCKED Variable.
+        /// The identifier for the Controllers_UA1_1_1_BLOCKED Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_BLOCKED = new ExpandedNodeId(Variables.UA_1_1_BLOCKED, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_BLOCKED = new ExpandedNodeId(Variables.Controllers_UA1_1_1_BLOCKED, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_CYCLE_TIME Variable.
+        /// The identifier for the Controllers_UA1_1_1_CYCLE_TIME Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_CYCLE_TIME = new ExpandedNodeId(Variables.UA_1_1_CYCLE_TIME, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_CYCLE_TIME = new ExpandedNodeId(Variables.Controllers_UA1_1_1_CYCLE_TIME, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_EMPTY Variable.
+        /// The identifier for the Controllers_UA1_1_1_EMPTY Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_EMPTY = new ExpandedNodeId(Variables.UA_1_1_EMPTY, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_EMPTY = new ExpandedNodeId(Variables.Controllers_UA1_1_1_EMPTY, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_EXCLUDED Variable.
+        /// The identifier for the Controllers_UA1_1_1_EXCLUDED Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_EXCLUDED = new ExpandedNodeId(Variables.UA_1_1_EXCLUDED, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_EXCLUDED = new ExpandedNodeId(Variables.Controllers_UA1_1_1_EXCLUDED, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_INTERVENTION Variable.
+        /// The identifier for the Controllers_UA1_1_1_INTERVENTION Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_INTERVENTION = new ExpandedNodeId(Variables.UA_1_1_INTERVENTION, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_INTERVENTION = new ExpandedNodeId(Variables.Controllers_UA1_1_1_INTERVENTION, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_RUN Variable.
+        /// The identifier for the Controllers_UA1_1_1_RUN Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_RUN = new ExpandedNodeId(Variables.UA_1_1_RUN, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_RUN = new ExpandedNodeId(Variables.Controllers_UA1_1_1_RUN, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_ST_INPUT Variable.
+        /// The identifier for the Controllers_UA1_1_1_ST_INPUT Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_ST_INPUT = new ExpandedNodeId(Variables.UA_1_1_ST_INPUT, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_ST_INPUT = new ExpandedNodeId(Variables.Controllers_UA1_1_1_ST_INPUT, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_ST_OUTPUT Variable.
+        /// The identifier for the Controllers_UA1_1_1_ST_OUTPUT Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_ST_OUTPUT = new ExpandedNodeId(Variables.UA_1_1_ST_OUTPUT, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_ST_OUTPUT = new ExpandedNodeId(Variables.Controllers_UA1_1_1_ST_OUTPUT, Namespaces.DcsLab);
 
         /// <summary>
-        /// The identifier for the UA_1_1_TIMEOUT Variable.
+        /// The identifier for the Controllers_UA1_1_1_TIMEOUT Variable.
         /// </summary>
-        public static readonly ExpandedNodeId UA_1_1_TIMEOUT = new ExpandedNodeId(Variables.UA_1_1_TIMEOUT, Namespaces.DcsLab);
+        public static readonly ExpandedNodeId Controllers_UA1_1_1_TIMEOUT = new ExpandedNodeId(Variables.Controllers_UA1_1_1_TIMEOUT, Namespaces.DcsLab);
 
     }
     #endregion
@@ -442,6 +452,10 @@ namespace PolslMacrocourse.DcsLab
         /// </summary>
         public const string CYCLE_TIME = "CYCLE_TIME";
         /// <summary>
+        /// The BrowseName for the Controllers component.
+        /// </summary>
+        public const string Controllers = "Controllers";
+        /// <summary>
         /// The BrowseName for the EMPTY component.
         /// </summary>
         public const string EMPTY = "EMPTY";
@@ -474,9 +488,9 @@ namespace PolslMacrocourse.DcsLab
         /// </summary>
         public const string TIMEOUT = "TIMEOUT";
         /// <summary>
-        /// The BrowseName for the UA_1_1 component.
+        /// The BrowseName for the UA1_1_1 component.
         /// </summary>
-        public const string UA_1_1 = "UA_1_1";
+        public const string UA1_1_1 = "UA1_1_1";
     }
     #endregion
 
