@@ -104,14 +104,14 @@ namespace PolslMacrocourse.DcsLab
                 Console.WriteLine("Starting DcsLabNodeManager.");
 
                 base.Startup();
-                DefaultNamespaceIndex = AddNamespaceUri("http://yourorganisation.org/DCS-lab/");
+                DefaultNamespaceIndex = AddNamespaceUri(PolslMacrocourse.DcsLab.Namespaces.DcsLab);
 
                 Console.WriteLine("Loading the DcsLab Model.");
                 ImportUaNodeset(Assembly.GetEntryAssembly(), "dcs-lab.xml");
 
                 Console.WriteLine("Loading the DcsLab hardcoded instances.");
-                InstanceNamespaceIndex = AddNamespaceUri("http://yourorganisation.com/DCS-lab/");
-                TypeNamespaceIndex = AddNamespaceUri(PolslMacrocourse.DcsLab.Namespaces.DcsLab);
+                InstanceNamespaceIndex = DefaultNamespaceIndex;
+                TypeNamespaceIndex = DefaultNamespaceIndex;
             }
             catch (Exception e)
             {
