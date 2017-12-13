@@ -47,6 +47,7 @@ using System.Text;
 using System.Threading;
 using System.IO;
 using System.Reflection;
+using PolslMacrocourse.DcsLab.Abstraction;
 using UnifiedAutomation.UaBase;
 using UnifiedAutomation.UaServer;
 namespace PolslMacrocourse.DcsLab
@@ -76,6 +77,8 @@ namespace PolslMacrocourse.DcsLab
         /// </summary>
         public DcsLabNodeManager(ServerManager server) : base(server)
         {
+            _directory = new DirectoryManager(this);
+            _factory = new AssemblyStationFactory(this);
         }
         #endregion
 
@@ -112,6 +115,9 @@ namespace PolslMacrocourse.DcsLab
                 Console.WriteLine("Loading the DcsLab hardcoded instances.");
                 InstanceNamespaceIndex = DefaultNamespaceIndex;
                 TypeNamespaceIndex = DefaultNamespaceIndex;
+
+                var controllers = _directory.Get(ObjectIds.Controllers);
+                var station = _factory.Create("UA2_1_1", controllers);
             }
             catch (Exception e)
             {
@@ -141,6 +147,10 @@ namespace PolslMacrocourse.DcsLab
         #endregion
 
         #region Private Fields
+
+        private readonly DirectoryManager _directory;
+        private readonly AssemblyStationFactory _factory;
+
         #endregion
     }
 }
