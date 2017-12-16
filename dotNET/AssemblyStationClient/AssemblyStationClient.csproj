@@ -56,7 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="StationAutomation\IUpdateable.cs" />
+    <Compile Include="StationAutomation\MonitoredInstance.cs" />
     <Compile Include="StationAutomation\ServerContext.cs" />
+    <Compile Include="StationAutomation\SessionInfo.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
