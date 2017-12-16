@@ -4,11 +4,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AssemblyStationClient.StationAutomation;
+using UnifiedAutomation.UaClient;
 
 namespace AssemblyStationClient.ViewModel
 {
+    /// <summary>
+    /// ViewModel for AssemblyStation defined in UaModeler
+    /// </summary>
+    /// <seealso cref="Spectre.Mvvm.Base.PropertyChangedNotification" />
     class AssemblyStationVm : PropertyChangedNotification
     {
+        #region Constructor
+        public AssemblyStationVm(Session session, string name)
+        {
+            Name = name;
+            _monitorService = new MonitorService(session, this);
+            _simulationService = new SimulationService(session, this);
+        }
+        #endregion
+
+        #region Properties
+        public string Name { get; }
+
         public bool StInput
         {
             get { return GetValue(() => StInput); }
@@ -68,5 +86,11 @@ namespace AssemblyStationClient.ViewModel
             get { return GetValue(() => Timeout); }
             set { SetValue(() => Timeout, value); }
         }
+        #endregion
+        
+        #region Privates
+        private readonly MonitorService _monitorService;
+        private readonly SimulationService _simulationService;
+        #endregion
     }
 }
