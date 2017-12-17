@@ -9,7 +9,7 @@ using UnifiedAutomation.UaClient;
 namespace AssemblyStationClient.StationAutomation
 {
     /// <summary>
-    /// Updates local AssemblyStationVm instance from the server
+    /// Updates local AssemblyStationVm instance from the server.
     /// </summary>
     class MonitorService
     {

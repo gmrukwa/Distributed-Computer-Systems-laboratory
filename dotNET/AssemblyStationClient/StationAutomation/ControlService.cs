@@ -9,6 +9,8 @@ using UnifiedAutomation.UaClient;
 namespace AssemblyStationClient.StationAutomation
 {
     /// <summary>
+    /// Maps changes from VM to server.
+    /// 
     /// Controls the remote instance of AssemblyStation.
     /// </summary>
     class ControlService
