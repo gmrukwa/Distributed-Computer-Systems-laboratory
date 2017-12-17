@@ -19,6 +19,10 @@ namespace AssemblyStationClient.ViewModel
         public AssemblyStationVm(Session session, string name)
         {
             Name = name;
+            // GUI: updates through PropertyChangedNotification
+            // MonitorService: needs no binding to events, updates VM directly (causes PropertyChangedNotification)
+            // ControlService: has dedicated functions to call update (no event fired)
+            // SimulationService: gets updates through PropertyChangedNotification, acts through ControlService
             _monitorService = new MonitorService(session, this);
             _controlService = new ControlService(session, this);
             _simulationService = new SimulationService(this, _controlService);
