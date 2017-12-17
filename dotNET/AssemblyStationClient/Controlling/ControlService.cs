@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AssemblyStationClient.ViewModel;
+﻿using AssemblyStationClient.ViewModel;
 using UnifiedAutomation.UaClient;
 
-namespace AssemblyStationClient.StationAutomation
+namespace AssemblyStationClient.Controlling
 {
     /// <summary>
     /// Maps changes from VM to server.

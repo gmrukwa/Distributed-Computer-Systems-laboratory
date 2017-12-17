@@ -1,9 +1,9 @@
 ﻿using System;
-using AssemblyStationClient.StationAutomation.Connection;
+using AssemblyStationClient.Connection;
 using UnifiedAutomation.UaBase;
 using UnifiedAutomation.UaClient;
 
-namespace AssemblyStationClient.StationAutomation.Monitoring
+namespace AssemblyStationClient.Monitoring
 {
     internal class MonitoredItemFactory
     {

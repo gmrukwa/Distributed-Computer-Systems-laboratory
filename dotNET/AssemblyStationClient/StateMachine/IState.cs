@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace AssemblyStationClient.StationAutomation.StateMachine
+namespace AssemblyStationClient.StateMachine
 {
     /// <summary>
     /// Interface of a state in state machine.

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnifiedAutomation.UaClient;
 
-namespace AssemblyStationClient.StationAutomation.Connection
+namespace AssemblyStationClient.Connection
 {
     class SessionInfo
     {

@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using UnifiedAutomation.UaClient;
 
-namespace AssemblyStationClient.StationAutomation.Monitoring
+namespace AssemblyStationClient.Monitoring
 {
     internal class SubscriptionManager : IDisposable
     {

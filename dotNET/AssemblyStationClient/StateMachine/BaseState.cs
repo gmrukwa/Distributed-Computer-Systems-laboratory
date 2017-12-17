@@ -2,13 +2,13 @@
 using System.ComponentModel;
 using Spectre.Mvvm.Base;
 
-namespace AssemblyStationClient.StationAutomation.StateMachine
+namespace AssemblyStationClient.StateMachine
 {
     /// <summary>
     /// Base state for a state machine.
     /// </summary>
     /// <typeparam name="T">Type of changing object</typeparam>
-    /// <seealso cref="AssemblyStationClient.StationAutomation.StateMachine.IState{T}" />
+    /// <seealso cref="IState{T}" />
     abstract class BaseState<T> : IState<T> where T : PropertyChangedNotification
     {
         public void Notify(object sender, PropertyChangedEventArgs eventArgs)

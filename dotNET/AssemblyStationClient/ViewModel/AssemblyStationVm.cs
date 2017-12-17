@@ -1,11 +1,7 @@
 ﻿using Spectre.Mvvm.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AssemblyStationClient.Controlling;
+using AssemblyStationClient.Monitoring;
 using AssemblyStationClient.StationAutomation;
-using AssemblyStationClient.StationAutomation.Monitoring;
 using UnifiedAutomation.UaClient;
 
 namespace AssemblyStationClient.ViewModel
@@ -17,14 +13,14 @@ namespace AssemblyStationClient.ViewModel
     class AssemblyStationVm : PropertyChangedNotification
     {
         #region Constructor
-        public AssemblyStationVm(Session session, string name)
+        public AssemblyStationVm(Session session, string name, string namespaceName)
         {
             Name = name;
             // GUI: updates through PropertyChangedNotification
             // MonitorService: needs no binding to events, updates VM directly (causes PropertyChangedNotification)
             // ControlService: has dedicated functions to call update (no event fired)
             // SimulationService: gets updates through PropertyChangedNotification, acts through ControlService
-            _monitorService = new MonitorService(session, this);
+            _monitorService = new MonitorService(session, this, namespaceName);
             _controlService = new ControlService(session, this);
             _simulationService = new SimulationService(this, _controlService);
         }

@@ -59,15 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="StationAutomation\ControlService.cs" />
-    <Compile Include="StationAutomation\Monitoring\MonitoredItemFactory.cs" />
-    <Compile Include="StationAutomation\ServerContext.cs" />
-    <Compile Include="StationAutomation\SessionInfo.cs" />
+    <Compile Include="Controlling\ControlService.cs" />
+    <Compile Include="Monitoring\MonitoredItemFactory.cs" />
+    <Compile Include="Connection\ServerContext.cs" />
+    <Compile Include="Connection\SessionInfo.cs" />
     <Compile Include="StationAutomation\SimulationService.cs" />
-    <Compile Include="StationAutomation\Monitoring\MonitorService.cs" />
-    <Compile Include="StationAutomation\StateMachine\BaseState.cs" />
-    <Compile Include="StationAutomation\StateMachine\IState.cs" />
-    <Compile Include="StationAutomation\Monitoring\SubscriptionManager.cs" />
+    <Compile Include="Monitoring\MonitorService.cs" />
+    <Compile Include="StateMachine\BaseState.cs" />
+    <Compile Include="StateMachine\IState.cs" />
+    <Compile Include="Monitoring\SubscriptionManager.cs" />
     <Compile Include="ViewModel\AssemblyStationVm.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
