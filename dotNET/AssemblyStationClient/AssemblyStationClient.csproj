@@ -67,6 +67,7 @@
     <Compile Include="StationAutomation\MonitorService.cs" />
     <Compile Include="StationAutomation\StateMachine\BaseState.cs" />
     <Compile Include="StationAutomation\StateMachine\IState.cs" />
+    <Compile Include="StationAutomation\SubscriptionManager.cs" />
     <Compile Include="ViewModel\AssemblyStationVm.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
