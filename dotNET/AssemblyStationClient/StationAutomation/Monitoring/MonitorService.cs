@@ -4,7 +4,7 @@ using System.Linq;
 using AssemblyStationClient.ViewModel;
 using UnifiedAutomation.UaClient;
 
-namespace AssemblyStationClient.StationAutomation
+namespace AssemblyStationClient.StationAutomation.Monitoring
 {
     /// <summary>
     /// Updates local AssemblyStationVm instance from the server.

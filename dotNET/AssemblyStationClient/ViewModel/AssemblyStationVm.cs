@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AssemblyStationClient.StationAutomation;
+using AssemblyStationClient.StationAutomation.Monitoring;
 using UnifiedAutomation.UaClient;
 
 namespace AssemblyStationClient.ViewModel

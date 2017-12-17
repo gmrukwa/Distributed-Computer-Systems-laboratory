@@ -2,9 +2,9 @@
 using UnifiedAutomation.UaBase;
 using UnifiedAutomation.UaClient;
 
-namespace AssemblyStationClient.StationAutomation
+namespace AssemblyStationClient.StationAutomation.Monitoring
 {
-    class MonitoredItemFactory
+    internal class MonitoredItemFactory
     {
         public MonitoredItemFactory(Session session, string instanceName, string namespaceName)
         {
