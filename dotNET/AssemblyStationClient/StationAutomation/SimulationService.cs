@@ -13,7 +13,7 @@ namespace AssemblyStationClient.StationAutomation
     /// </summary>
     class SimulationService
     {
-        public SimulationService(AssemblyStationVm vm)
+        public SimulationService(AssemblyStationVm vm, ControlService controlService)
         {
             
         }

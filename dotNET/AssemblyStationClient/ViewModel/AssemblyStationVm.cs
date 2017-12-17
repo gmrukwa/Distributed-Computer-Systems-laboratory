@@ -21,7 +21,7 @@ namespace AssemblyStationClient.ViewModel
             Name = name;
             _monitorService = new MonitorService(session, this);
             _controlService = new ControlService(session, this);
-            _simulationService = new SimulationService(this);
+            _simulationService = new SimulationService(this, _controlService);
         }
         #endregion
 
