@@ -3,7 +3,7 @@ using System.IO;
 using UnifiedAutomation.UaBase;
 using UnifiedAutomation.UaClient;
 
-namespace AssemblyStationClient.StationAutomation
+namespace AssemblyStationClient.StationAutomation.Connection
 {
     internal class ServerContext : IDisposable
     {

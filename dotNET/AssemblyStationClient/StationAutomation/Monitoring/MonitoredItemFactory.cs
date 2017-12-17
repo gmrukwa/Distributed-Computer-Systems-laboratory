@@ -1,4 +1,5 @@
 ﻿using System;
+using AssemblyStationClient.StationAutomation.Connection;
 using UnifiedAutomation.UaBase;
 using UnifiedAutomation.UaClient;
 
