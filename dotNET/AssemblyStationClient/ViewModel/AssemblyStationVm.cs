@@ -20,7 +20,8 @@ namespace AssemblyStationClient.ViewModel
         {
             Name = name;
             _monitorService = new MonitorService(session, this);
-            _simulationService = new SimulationService(session, this);
+            _controlService = new ControlService(session, this);
+            _simulationService = new SimulationService(_controlService, this);
         }
         #endregion
 
@@ -90,6 +91,7 @@ namespace AssemblyStationClient.ViewModel
         
         #region Privates
         private readonly MonitorService _monitorService;
+        private readonly ControlService _controlService;
         private readonly SimulationService _simulationService;
         #endregion
     }

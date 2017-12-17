@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="StationAutomation\ControlService.cs" />
     <Compile Include="StationAutomation\ServerContext.cs" />
     <Compile Include="StationAutomation\SimulationService.cs" />
     <Compile Include="StationAutomation\MonitorService.cs" />

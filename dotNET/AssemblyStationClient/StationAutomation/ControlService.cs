@@ -9,11 +9,11 @@ using UnifiedAutomation.UaClient;
 namespace AssemblyStationClient.StationAutomation
 {
     /// <summary>
-    /// Simulates AssemblyStation behavior.
+    /// Controls the remote instance of AssemblyStation.
     /// </summary>
-    class SimulationService
+    class ControlService
     {
-        public SimulationService(ControlService controlService, AssemblyStationVm vm)
+        public ControlService(Session session, AssemblyStationVm vm)
         {
             
         }
