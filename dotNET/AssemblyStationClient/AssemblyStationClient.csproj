@@ -60,6 +60,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="StationAutomation\ControlService.cs" />
+    <Compile Include="StationAutomation\MonitoredItemFactory.cs" />
     <Compile Include="StationAutomation\ServerContext.cs" />
     <Compile Include="StationAutomation\SessionInfo.cs" />
     <Compile Include="StationAutomation\SimulationService.cs" />
