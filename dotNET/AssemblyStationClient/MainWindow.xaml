@@ -5,11 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:AssemblyStationClient.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="850">
     <Window.DataContext>
         <vm:MainPageVm/>
     </Window.DataContext>
     <Grid>
+        
+        <ListBox ItemsSource="{Binding AssemblyStations}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBlock Grid.Row="0"
+                                   Text="{Binding Name}"/>
+                        
+                        <!--Monitoring-->
+                        <StackPanel Grid.Row="1" Orientation="Horizontal">
+                            <CheckBox Content="ST INPUT" IsChecked="{Binding StInput}" IsEnabled="False" Margin="5"/>
+                            <CheckBox Content="ST OUTPUT" IsChecked="{Binding StOutput}" IsEnabled="False" Margin="5"/>
+                            <TextBox Text="{Binding CycleTime}" IsEnabled="False" Width="25" Margin="5"/>
+                            <Label Content="CYCLE_TIME"/>
+                            <CheckBox Content="ALARM" IsChecked="{Binding Alarm}" IsEnabled="False" Margin="5"/>
+                            <CheckBox Content="BLOCKED" IsChecked="{Binding Blocked}" IsEnabled="False" Margin="5"/>
+                            <CheckBox Content="EMPTY" IsChecked="{Binding Empty}" IsEnabled="False" Margin="5"/>
+                            <CheckBox Content="EXCLUDED" IsChecked="{Binding Excluded}" IsEnabled="False" Margin="5"/>
+                            <CheckBox Content="INTERVENTION" IsChecked="{Binding Intervention}" IsEnabled="False" Margin="5"/>
+                            <CheckBox Content="RUN" IsChecked="{Binding Run}" IsEnabled="False" Margin="5"/>
+                            <CheckBox Content="TIMEOUT" IsChecked="{Binding Timeout}" IsEnabled="False" Margin="5"/>
+                        </StackPanel>
+
+                        <!--Steering-->
+                        <StackPanel Grid.Row="2" Orientation="Horizontal">
+                            <Button Content="Toggle Intervention"
+                                    Command="{Binding ToggleIntervention}"
+                                    Width="195"
+                                    Margin="5"/>
+                            <Button Content="Toggle Excluded"
+                                    Command="{Binding ToggleExcluded}"
+                                    Width="195"
+                                    Margin="5"/>
+                            <Button Content="Issue Input"
+                                    Command="{Binding IssueInput}"
+                                    Width="195"
+                                    Margin="5"/>
+                            <Button Content="Remove Output"
+                                    Command="{Binding RemoveOutput}"
+                                    Width="195"
+                                    Margin="5"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         
     </Grid>
 </Window>
