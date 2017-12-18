@@ -23,6 +23,7 @@ namespace AssemblyStationClient.Monitoring
                 PublishingInterval = 100
             };
             subscription.DataChanged += HandleDataChange;
+            subscription.Create();
             return subscription;
         }
 
