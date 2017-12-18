@@ -64,6 +64,7 @@
     <Compile Include="Monitoring\MonitoredItemFactory.cs" />
     <Compile Include="Connection\ServerContext.cs" />
     <Compile Include="Connection\SessionInfo.cs" />
+    <Compile Include="StateMachine\AssemblyStationState.cs" />
     <Compile Include="StationAutomation\SimulationService.cs" />
     <Compile Include="Monitoring\MonitorService.cs" />
     <Compile Include="StateMachine\BaseState.cs" />
