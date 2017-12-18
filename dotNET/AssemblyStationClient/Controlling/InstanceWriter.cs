@@ -60,7 +60,7 @@ namespace AssemblyStationClient.Controlling
                 Value = dataValue
             };
             var statusCode = _session.Write(new List<WriteValue> { writeValue })[0];
-            if (statusCode.IsGood())
+            if (!statusCode.IsGood())
             {
                 throw new IOException($"Failed to write {value} on {nodeName}.");
             }
