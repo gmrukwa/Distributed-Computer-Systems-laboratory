@@ -15,12 +15,12 @@ VARIABLES+= dcs-lab.ua: Namespace=DcsLab; Organization=PolslMacrocourse;
 COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
     dcs-lab.ua: #008000
 
-PROJECTVARIABLES += GenerateDefaultApplication = true \
+PROJECTVARIABLES += GenerateDefaultApplication = false \
     NetFramework = 4.6.1 \
     ProjectNamespace = DcsLab \
     ProjectOrganization = PolslMacrocourse
 
-OUTPUTPATH = ../dotNET
+OUTPUTPATH = ../dotNET/Server
 
 GENERATE += dcs-lab.ua
 
