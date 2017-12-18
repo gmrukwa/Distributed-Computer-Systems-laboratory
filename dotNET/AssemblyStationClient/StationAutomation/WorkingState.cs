@@ -14,7 +14,9 @@ namespace AssemblyStationClient.StationAutomation
         public WorkingState(ControlService controlService) : base(controlService)
         {
             var workingTime = (byte) new Random().Next(10, 51);
-            _stationRunner = new Task(() => DoStationWork(workingTime));
+            _tokenSource = new CancellationTokenSource();
+            _cancellationToken = _tokenSource.Token;
+            _stationRunner = new Task(() => DoStationWork(workingTime), _cancellationToken);
             _stationRunner.Start();
         }
 
@@ -43,6 +45,8 @@ namespace AssemblyStationClient.StationAutomation
             const int second = 1000;
             for (byte current = 0; current < workingTime; ++current)
             {
+                if (_cancellationToken.IsCancellationRequested)
+                    break;
                 Thread.Sleep(second);
                 ControlService.Write("CYCLE_TIME", current);
                 if (current == TimeoutTime)
@@ -68,7 +72,11 @@ namespace AssemblyStationClient.StationAutomation
         private void Dispose(bool disposing)
         {
             if (disposing && !_disposed)
+            {
+                _tokenSource.Cancel();
+                _stationRunner.Wait();
                 _stationRunner.Dispose();
+            }
             _disposed = true;
         }
 
@@ -78,5 +86,7 @@ namespace AssemblyStationClient.StationAutomation
         private static readonly IEnumerable<string> TransitionVariables = new[] { "Intervention", "Alarm", "Run" };
         private const byte TimeoutTime = 60;
         private readonly Task _stationRunner;
+        private readonly CancellationToken _cancellationToken;
+        private readonly CancellationTokenSource _tokenSource;
     }
 }
