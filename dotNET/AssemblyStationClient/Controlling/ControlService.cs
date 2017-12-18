@@ -29,7 +29,7 @@ namespace AssemblyStationClient.Controlling
         {
             if(variableName == "CYCLE_TIME" && typeof(T) != typeof(byte))
                 throw new ArgumentException(variableName);
-            if(typeof(T) != typeof(bool))
+            if(variableName != "CYCLE_TIME" && typeof(T) != typeof(bool))
                 throw new ArgumentException(variableName);
         }
 
