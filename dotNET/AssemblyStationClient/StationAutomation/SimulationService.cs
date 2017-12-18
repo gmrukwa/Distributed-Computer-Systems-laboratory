@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AssemblyStationClient.Controlling;
+﻿using AssemblyStationClient.Controlling;
 using AssemblyStationClient.ViewModel;
-using UnifiedAutomation.UaClient;
 
 namespace AssemblyStationClient.StationAutomation
 {
@@ -16,7 +10,8 @@ namespace AssemblyStationClient.StationAutomation
     {
         public SimulationService(AssemblyStationVm vm, ControlService controlService)
         {
-            
+            var state = new IdleState(controlService);
+            vm.PropertyChanged += state.Notify;
         }
     }
 }
