@@ -74,7 +74,7 @@ namespace PolslMacrocourse.DcsLab
         /// <summary>
         /// The identifier for the UA1_1_1 Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1 = 5002;
+        public const String Controllers_UA1_1_1 = "UA1_1_1";
 
     }
     #endregion
@@ -179,52 +179,52 @@ namespace PolslMacrocourse.DcsLab
         /// <summary>
         /// The identifier for the ALARM Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_ALARM = 6011;
+        public const String Controllers_UA1_1_1_ALARM = "UA1_1_1.ALARM";
 
         /// <summary>
         /// The identifier for the BLOCKED Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_BLOCKED = 6012;
+        public const String Controllers_UA1_1_1_BLOCKED = "UA1_1_1.BLOCKED";
 
         /// <summary>
         /// The identifier for the CYCLE_TIME Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_CYCLE_TIME = 6013;
+        public const String Controllers_UA1_1_1_CYCLE_TIME = "UA1_1_1.CYCLE_TIME";
 
         /// <summary>
         /// The identifier for the EMPTY Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_EMPTY = 6014;
+        public const String Controllers_UA1_1_1_EMPTY = "UA1_1_1.EMPTY";
 
         /// <summary>
         /// The identifier for the EXCLUDED Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_EXCLUDED = 6015;
+        public const String Controllers_UA1_1_1_EXCLUDED = "UA1_1_1.EXCLUDED";
 
         /// <summary>
         /// The identifier for the INTERVENTION Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_INTERVENTION = 6016;
+        public const String Controllers_UA1_1_1_INTERVENTION = "UA1_1_1.INTERVENTION";
 
         /// <summary>
         /// The identifier for the RUN Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_RUN = 6017;
+        public const String Controllers_UA1_1_1_RUN = "UA1_1_1.RUN";
 
         /// <summary>
         /// The identifier for the ST_INPUT Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_ST_INPUT = 6018;
+        public const String Controllers_UA1_1_1_ST_INPUT = "UA1_1_1.ST_INPUT";
 
         /// <summary>
         /// The identifier for the ST_OUTPUT Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_ST_OUTPUT = 6019;
+        public const String Controllers_UA1_1_1_ST_OUTPUT = "UA1_1_1.ST_OUTPUT";
 
         /// <summary>
         /// The identifier for the TIMEOUT Object.
         /// </summary>
-        public const uint Controllers_UA1_1_1_TIMEOUT = 6020;
+        public const String Controllers_UA1_1_1_TIMEOUT = "UA1_1_1.TIMEOUT";
 
     }
     #endregion
