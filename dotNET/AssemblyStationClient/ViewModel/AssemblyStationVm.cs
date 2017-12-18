@@ -1,4 +1,5 @@
-﻿using Spectre.Mvvm.Base;
+﻿using System;
+using Spectre.Mvvm.Base;
 using AssemblyStationClient.Controlling;
 using AssemblyStationClient.Monitoring;
 using AssemblyStationClient.StationAutomation;
@@ -10,7 +11,7 @@ namespace AssemblyStationClient.ViewModel
     /// ViewModel for AssemblyStation defined in UaModeler
     /// </summary>
     /// <seealso cref="Spectre.Mvvm.Base.PropertyChangedNotification" />
-    class AssemblyStationVm : PropertyChangedNotification
+    class AssemblyStationVm : PropertyChangedNotification, IDisposable
     {
         #region Constructor
         public AssemblyStationVm(Session session, string name, string namespaceName)
@@ -94,6 +95,28 @@ namespace AssemblyStationClient.ViewModel
         private readonly MonitorService _monitorService;
         private readonly ControlService _controlService;
         private readonly SimulationService _simulationService;
+        #endregion
+
+        #region IDisposable
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        ~AssemblyStationVm()
+        {
+            Dispose(false);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if(disposing && !_disposed)
+                _monitorService.Dispose();
+            _disposed = true;
+        }
+
+        private bool _disposed;
         #endregion
     }
 }
