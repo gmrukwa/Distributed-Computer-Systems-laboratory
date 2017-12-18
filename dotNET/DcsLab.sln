@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyStationClient", "AssemblyStationClient\AssemblyStationClient.csproj", "{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spectre.Mvvm", "Spectre.Mvvm\Spectre.Mvvm.csproj", "{2D24F1E7-18D4-4FC0-9E4F-2F32FF27FCCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,12 @@ Global
 		{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}.Release|x64.ActiveCfg = Release|Any CPU
 		{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}.Release|x64.Build.0 = Release|Any CPU
+		{2D24F1E7-18D4-4FC0-9E4F-2F32FF27FCCE}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{2D24F1E7-18D4-4FC0-9E4F-2F32FF27FCCE}.Debug|x64.ActiveCfg = Debug|x64
+		{2D24F1E7-18D4-4FC0-9E4F-2F32FF27FCCE}.Debug|x64.Build.0 = Debug|x64
+		{2D24F1E7-18D4-4FC0-9E4F-2F32FF27FCCE}.Release|Any CPU.ActiveCfg = Release|x64
+		{2D24F1E7-18D4-4FC0-9E4F-2F32FF27FCCE}.Release|x64.ActiveCfg = Release|x64
+		{2D24F1E7-18D4-4FC0-9E4F-2F32FF27FCCE}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
