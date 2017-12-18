@@ -54,7 +54,7 @@ namespace AssemblyStationClient.ViewModel
         #endregion
 
         private static readonly string[] InstanceNames = {"UA1_1_1", "UA2_1_1"};
-        private const string ServerAddress = "http://localhost:48030";
+        private const string ServerAddress = "opc.tcp://localhost:48030";
         private const string NamespaceUniqueString = "DCS-lab";
         private readonly ServerContext _context;
     }
