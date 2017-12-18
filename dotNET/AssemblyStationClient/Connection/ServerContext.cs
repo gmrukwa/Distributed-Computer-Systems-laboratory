@@ -36,8 +36,8 @@ namespace AssemblyStationClient.Connection
             {
                 Session.Disconnect();
                 Session.Dispose();
-                _disposed = true;
             }
+            _disposed = true;
         }
 
         private void ThrowOnConnectionLost(Session sender, ServerConnectionStatusUpdateEventArgs e)

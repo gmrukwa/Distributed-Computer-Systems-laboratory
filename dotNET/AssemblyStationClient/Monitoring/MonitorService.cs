@@ -51,6 +51,7 @@ namespace AssemblyStationClient.Monitoring
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         ~MonitorService()
@@ -62,6 +63,7 @@ namespace AssemblyStationClient.Monitoring
         {
             if (disposing && !_disposed)
                 _subscriptionManager.Dispose();
+            _disposed = true;
         }
 
         private bool _disposed;
