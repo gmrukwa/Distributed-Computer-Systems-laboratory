@@ -60,6 +60,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controlling\ControlService.cs" />
+    <Compile Include="Controlling\InstanceWriter.cs" />
     <Compile Include="Monitoring\MonitoredItemFactory.cs" />
     <Compile Include="Connection\ServerContext.cs" />
     <Compile Include="Connection\SessionInfo.cs" />
