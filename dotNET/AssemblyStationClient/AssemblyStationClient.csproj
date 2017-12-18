@@ -77,6 +77,7 @@
     <Compile Include="Monitoring\SubscriptionManager.cs" />
     <Compile Include="StationAutomation\WorkingState.cs" />
     <Compile Include="ViewModel\AssemblyStationVm.cs" />
+    <Compile Include="ViewModel\MainPageVm.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
