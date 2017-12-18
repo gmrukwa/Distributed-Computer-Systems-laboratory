@@ -90,7 +90,57 @@ namespace AssemblyStationClient.ViewModel
             set { SetValue(() => Timeout, value); }
         }
         #endregion
+
+        #region RelayCommands
+        #region ToggleIntervention
+        private RelayCommand _toggleIntervention;
+        public RelayCommand ToggleIntervention
+        {
+            get
+            {
+                return _toggleIntervention ?? (_toggleIntervention = new RelayCommand(
+                    () => _controlService.Write("INTERVENTION", !Intervention)));
+            }
+        }
+        #endregion
         
+        #region ToggleExcluded
+        private RelayCommand _toggleExcluded;
+        public RelayCommand ToggleExcluded
+        {
+            get
+            {
+                return _toggleExcluded ?? (_toggleExcluded = new RelayCommand(
+                           () => _controlService.Write("EXCLUDED", !Excluded)));
+            }
+        }
+        #endregion
+        
+        #region IssueInput
+        private RelayCommand _issueInput;
+        public RelayCommand IssueInput
+        {
+            get
+            {
+                return _issueInput ?? (_issueInput = new RelayCommand(
+                           () => _controlService.Write("ST_INPUT", true)));
+            }
+        }
+        #endregion
+
+        #region RemoveOutput
+        private RelayCommand _removeOutput;
+        public RelayCommand RemoveOutput
+        {
+            get
+            {
+                return _removeOutput ?? (_removeOutput = new RelayCommand(
+                           () => _controlService.Write("ST_OUTPUT", false)));
+            }
+        }
+        #endregion
+        #endregion
+
         #region Privates
         private readonly MonitorService _monitorService;
         private readonly ControlService _controlService;
