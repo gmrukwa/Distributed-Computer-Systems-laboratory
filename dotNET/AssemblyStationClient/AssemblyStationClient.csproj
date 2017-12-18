@@ -65,11 +65,17 @@
     <Compile Include="Connection\ServerContext.cs" />
     <Compile Include="Connection\SessionInfo.cs" />
     <Compile Include="StateMachine\AssemblyStationState.cs" />
+    <Compile Include="StationAutomation\AlarmState.cs" />
+    <Compile Include="StationAutomation\BlockedState.cs" />
+    <Compile Include="StationAutomation\ExcludedState.cs" />
+    <Compile Include="StationAutomation\IdleState.cs" />
+    <Compile Include="StationAutomation\InterventionState.cs" />
     <Compile Include="StationAutomation\SimulationService.cs" />
     <Compile Include="Monitoring\MonitorService.cs" />
     <Compile Include="StateMachine\BaseState.cs" />
     <Compile Include="StateMachine\IState.cs" />
     <Compile Include="Monitoring\SubscriptionManager.cs" />
+    <Compile Include="StationAutomation\WorkingState.cs" />
     <Compile Include="ViewModel\AssemblyStationVm.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
