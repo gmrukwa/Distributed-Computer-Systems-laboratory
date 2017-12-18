@@ -26,6 +26,7 @@ namespace AssemblyStationClient.StateMachine
             {
                 vm.PropertyChanged -= Notify;
                 var next = GetNext(vm, updatedPropertyName);
+                (this as IDisposable)?.Dispose();
                 vm.PropertyChanged += next.Notify;
             }
         }
