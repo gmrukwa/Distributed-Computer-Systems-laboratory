@@ -6,7 +6,10 @@ namespace AssemblyStationClient.StationAutomation
 {
     class BlockedState : AssemblyStationState
     {
-        public BlockedState(ControlService controlService) : base(controlService) { }
+        public BlockedState(ControlService controlService) : base(controlService)
+        {
+            ControlService.Write("BLOCKED", true);
+        }
 
         public override bool ChangesState(AssemblyStationVm vm, string updatedPropertyName)
         {

@@ -22,8 +22,8 @@ namespace AssemblyStationClient.StationAutomation
                 return new AlarmState(ControlService);
             if (vm.Excluded)
                 return new ExcludedState(ControlService);
-            ControlService.Write("ST_INPUT", false);
-            ControlService.Write("RUN", true);
+            if (!vm.StInput)
+                return this;
             return new WorkingState(ControlService);
         }
     }

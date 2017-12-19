@@ -13,6 +13,8 @@ namespace AssemblyStationClient.StationAutomation
     {
         public WorkingState(ControlService controlService) : base(controlService)
         {
+            ControlService.Write("ST_INPUT", false);
+            ControlService.Write("RUN", true);
             var workingTime = (byte) new Random().Next(10, 51);
             _tokenSource = new CancellationTokenSource();
             _cancellationToken = _tokenSource.Token;
@@ -27,16 +29,12 @@ namespace AssemblyStationClient.StationAutomation
 
         public override IState<AssemblyStationVm> GetNext(AssemblyStationVm vm, string updatedPropertyName)
         {
-            ControlService.Write("RUN", false);
-            ControlService.Write("TIMEOUT", false);
             if (vm.Intervention)
                 return new InterventionState(ControlService);
-            if (vm.StOutput)
-            {
-                ControlService.Write("BLOCKED", true);
+            if (vm.StOutput)    
                 return new BlockedState(ControlService);
-            }
-            ControlService.Write("ST_OUTPUT", true);
+            if (vm.Run)
+                return this;
             return new IdleState(ControlService);
         }
 
@@ -55,6 +53,9 @@ namespace AssemblyStationClient.StationAutomation
                 }
             }
             ControlService.Write("RUN", false);
+            ControlService.Write("TIMEOUT", false);
+            if (!_cancellationToken.IsCancellationRequested)
+                ControlService.Write("ST_OUTPUT", true);
         }
 
         #region IDisposable

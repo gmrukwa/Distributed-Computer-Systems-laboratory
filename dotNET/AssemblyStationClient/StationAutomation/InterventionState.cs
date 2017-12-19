@@ -15,6 +15,8 @@ namespace AssemblyStationClient.StationAutomation
 
         public override IState<AssemblyStationVm> GetNext(AssemblyStationVm vm, string updatedPropertyName)
         {
+            if (vm.StInput)
+                return new WorkingState(ControlService);
             return new IdleState(ControlService);
         }
     }
