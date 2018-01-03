@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Station_Sim_1_1", "Station_Sim_1_1.csproj", "{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientTests", "..\ClientTests\ClientTests.csproj", "{D7265BB5-8A6F-4209-BB1E-B505E5C92776}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +17,10 @@ Global
 		{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}.Debug|x64.Build.0 = Debug|x64
 		{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}.Release|x64.ActiveCfg = Release|x64
 		{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}.Release|x64.Build.0 = Release|x64
+		{D7265BB5-8A6F-4209-BB1E-B505E5C92776}.Debug|x64.ActiveCfg = Debug|x64
+		{D7265BB5-8A6F-4209-BB1E-B505E5C92776}.Debug|x64.Build.0 = Debug|x64
+		{D7265BB5-8A6F-4209-BB1E-B505E5C92776}.Release|x64.ActiveCfg = Release|x64
+		{D7265BB5-8A6F-4209-BB1E-B505E5C92776}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
