@@ -19,7 +19,7 @@ namespace AssemblyStationClient.Controlling
             _writer = new InstanceWriter(session, vm.Name, namespaceName);
         }
 
-        public void Write<T>(string variableName, T value)
+        public virtual void Write<T>(string variableName, T value)
         {
             ValidateType<T>(variableName);
             _writer.Write(variableName, value);
