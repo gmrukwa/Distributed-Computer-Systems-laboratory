@@ -50,9 +50,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StationAutomation\AlarmStateTests.cs" />
+    <Compile Include="StationAutomation\BlockedStateTests.cs" />
+    <Compile Include="StationAutomation\ExcludedStateTests.cs" />
+    <Compile Include="StationAutomation\IdleStateTests.cs" />
+    <Compile Include="StationAutomation\InterventionStateTests.cs" />
+    <Compile Include="StationAutomation\WorkingStateTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AssemblyStationClient\Station_Sim_1_1.csproj">
+      <Project>{D7C51A8E-37FA-42D5-B3DC-2948DE867E5C}</Project>
+      <Name>Station_Sim_1_1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
