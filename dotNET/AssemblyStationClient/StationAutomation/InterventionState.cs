@@ -4,7 +4,7 @@ using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StationAutomation
 {
-    class InterventionState : AssemblyStationState
+    public class InterventionState : AssemblyStationState
     {
         public InterventionState(ControlService controlService) : base(controlService) { }
 

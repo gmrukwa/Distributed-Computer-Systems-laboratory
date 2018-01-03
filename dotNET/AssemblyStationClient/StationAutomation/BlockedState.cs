@@ -4,7 +4,7 @@ using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StationAutomation
 {
-    class BlockedState : AssemblyStationState
+    public class BlockedState : AssemblyStationState
     {
         public BlockedState(ControlService controlService) : base(controlService)
         {

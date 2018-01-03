@@ -4,7 +4,7 @@ using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StationAutomation
 {
-    class ExcludedState : AssemblyStationState
+    public class ExcludedState : AssemblyStationState
     {
         public ExcludedState(ControlService controlService) : base(controlService) { }
 

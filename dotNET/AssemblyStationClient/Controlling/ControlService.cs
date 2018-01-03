@@ -12,7 +12,7 @@ namespace AssemblyStationClient.Controlling
     /// 
     /// Controls the remote instance of AssemblyStation.
     /// </summary>
-    class ControlService
+    public class ControlService
     {
         public ControlService(Session session, AssemblyStationVm vm, string namespaceName)
         {

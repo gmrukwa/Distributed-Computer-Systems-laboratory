@@ -9,7 +9,7 @@ using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StationAutomation
 {
-    class WorkingState : AssemblyStationState, IDisposable
+    public class WorkingState : AssemblyStationState, IDisposable
     {
         public WorkingState(ControlService controlService) : base(controlService)
         {

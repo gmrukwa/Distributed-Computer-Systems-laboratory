@@ -6,7 +6,7 @@ namespace AssemblyStationClient.StateMachine
     /// Interface of a state in state machine.
     /// </summary>
     /// <typeparam name="T">Type of state subject.</typeparam>
-    interface IState<T>
+    public interface IState<T>
     {
         void Notify(object sender, PropertyChangedEventArgs eventArgs);
 

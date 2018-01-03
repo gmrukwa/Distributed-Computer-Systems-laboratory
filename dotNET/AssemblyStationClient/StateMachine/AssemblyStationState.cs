@@ -3,7 +3,7 @@ using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StateMachine
 {
-    abstract class AssemblyStationState : BaseState<AssemblyStationVm>
+    public abstract class AssemblyStationState : BaseState<AssemblyStationVm>
     {
         protected AssemblyStationState(ControlService controlService)
         {

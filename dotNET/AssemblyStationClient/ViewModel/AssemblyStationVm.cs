@@ -11,7 +11,7 @@ namespace AssemblyStationClient.ViewModel
     /// ViewModel for AssemblyStation defined in UaModeler
     /// </summary>
     /// <seealso cref="Spectre.Mvvm.Base.PropertyChangedNotification" />
-    class AssemblyStationVm : PropertyChangedNotification, IDisposable
+    public class AssemblyStationVm : PropertyChangedNotification, IDisposable
     {
         #region Constructor
         public AssemblyStationVm(Session session, string name, string namespaceName)

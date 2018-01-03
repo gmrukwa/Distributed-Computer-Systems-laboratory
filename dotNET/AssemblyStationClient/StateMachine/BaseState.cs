@@ -9,7 +9,7 @@ namespace AssemblyStationClient.StateMachine
     /// </summary>
     /// <typeparam name="T">Type of changing object</typeparam>
     /// <seealso cref="IState{T}" />
-    abstract class BaseState<T> : IState<T> where T : PropertyChangedNotification
+    public abstract class BaseState<T> : IState<T> where T : PropertyChangedNotification
     {
         public void Notify(object sender, PropertyChangedEventArgs eventArgs)
         {

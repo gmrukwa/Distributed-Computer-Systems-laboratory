@@ -5,7 +5,7 @@ using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StationAutomation
 {
-    class IdleState: AssemblyStationState
+    public class IdleState: AssemblyStationState
     {
         public IdleState(ControlService controlService) : base(controlService) { }
 

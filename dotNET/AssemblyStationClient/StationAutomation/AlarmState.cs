@@ -4,7 +4,7 @@ using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StationAutomation
 {
-    class AlarmState : AssemblyStationState
+    public class AlarmState : AssemblyStationState
     {
         public AlarmState(ControlService controlService) : base(controlService) { }
 
