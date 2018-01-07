@@ -50,6 +50,19 @@
   <ItemGroup>
     <Compile Include="Abstraction\AssemblyStationFactory.cs" />
     <Compile Include="Abstraction\DirectoryManager.cs" />
+    <Compile Include="AssemblyStationState.cs" />
+    <Compile Include="BaseState.cs" />
+    <Compile Include="IState.cs" />
+    <Compile Include="StateMachine\AssemblyStationState.cs" />
+    <Compile Include="StateMachine\BaseState.cs" />
+    <Compile Include="StateMachine\IState.cs" />
+    <Compile Include="StationAutomation\AlarmState.cs" />
+    <Compile Include="StationAutomation\BlockedState.cs" />
+    <Compile Include="StationAutomation\ExcludedState.cs" />
+    <Compile Include="StationAutomation\IdleState.cs" />
+    <Compile Include="StationAutomation\InterventionState.cs" />
+    <Compile Include="StationAutomation\SimulationService.cs" />
+    <Compile Include="StationAutomation\WorkingState.cs" />
     <Compile Include="TestServerManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="AssemblyInfo.cs" />

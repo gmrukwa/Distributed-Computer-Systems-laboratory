@@ -1,0 +1,25 @@
+﻿using AssemblyStationClient.StateMachine;
+using AssemblyStationClient.ViewModel;
+
+namespace AssemblyStationClient.StationAutomation
+{
+    public class ExcludedState : AssemblyStationState
+    {
+        public ExcludedState(AssemblyStationState previous) : base(previous)
+        {
+            ControlService.Write("EXCLUDED", true);
+        }
+
+        public override bool ChangesState(AssemblyStationVm vm, string updatedPropertyName)
+        {
+            return updatedPropertyName == "Excluded";
+        }
+
+        public override IState<AssemblyStationVm> GetNext(AssemblyStationVm vm, string updatedPropertyName)
+        {
+            if (vm.StInput)
+                return new WorkingState(this);
+            return new IdleState(this);
+        }
+    }
+}
