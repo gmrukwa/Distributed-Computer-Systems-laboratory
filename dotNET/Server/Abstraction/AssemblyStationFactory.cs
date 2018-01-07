@@ -8,7 +8,6 @@ using UnifiedAutomation.UaServer;
 
 namespace PolslMacrocourse.DcsLab.Abstraction
 {
-    using AssemblyStation = ObjectNode;
     using Directory = ObjectNode;
 
     internal class AssemblyStationFactory
@@ -30,7 +29,7 @@ namespace PolslMacrocourse.DcsLab.Abstraction
                 TypeDefinitionId = new NodeId(PolslMacrocourse.DcsLab.ObjectTypes.AssemblyStationType, _nodeManager.TypeNamespaceIndex)
             };
             var node = _nodeManager.CreateObject(_nodeManager.Server.DefaultRequestContext, settings);
-            return node;
+            return new AssemblyStation(node, _nodeManager);
         }
 
         private readonly DcsLabNodeManager _nodeManager;
