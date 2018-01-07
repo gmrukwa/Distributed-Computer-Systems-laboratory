@@ -14,7 +14,7 @@
     </Aliases>
     <Extensions>
         <Extension>
-            <ua:ModelInfo Tool="UaModeler" Hash="wR6g4ZmPuJlRwngEw5pkaw==" Version="1.5.2"/>
+            <ua:ModelInfo Tool="UaModeler" Hash="htDFDhrXrk6Z1/fi6slSVQ==" Version="1.5.2"/>
         </Extension>
     </Extensions>
     <UAObjectType IsAbstract="true" NodeId="ns=1;i=1002" BrowseName="1:StationType">
@@ -124,124 +124,6 @@
         <References>
             <Reference ReferenceType="Organizes" IsForward="false">i=2253</Reference>
             <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
-            <Reference ReferenceType="Organizes">ns=1;s=UA1_1_1</Reference>
         </References>
     </UAObject>
-    <UAObject NodeId="ns=1;s=UA1_1_1" BrowseName="1:UA1_1_1">
-        <DisplayName>UA1_1_1</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.ALARM</Reference>
-            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.BLOCKED</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.CYCLE_TIME</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.EMPTY</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.EXCLUDED</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.INTERVENTION</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.RUN</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.ST_INPUT</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.ST_OUTPUT</Reference>
-            <Reference ReferenceType="HasComponent">ns=1;s=UA1_1_1.TIMEOUT</Reference>
-            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5003</Reference>
-        </References>
-    </UAObject>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.ALARM" BrowseName="1:ALARM" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>ALARM</DisplayName>
-        <References>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.BLOCKED" BrowseName="1:BLOCKED" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>BLOCKED</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Byte" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.CYCLE_TIME" BrowseName="1:CYCLE_TIME" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>CYCLE_TIME</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Byte>0</uax:Byte>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.EMPTY" BrowseName="1:EMPTY" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>EMPTY</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.EXCLUDED" BrowseName="1:EXCLUDED" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>EXCLUDED</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.INTERVENTION" BrowseName="1:INTERVENTION" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>INTERVENTION</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.RUN" BrowseName="1:RUN" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>RUN</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.ST_INPUT" BrowseName="1:ST_INPUT" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>ST_INPUT</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.ST_OUTPUT" BrowseName="1:ST_OUTPUT" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>ST_OUTPUT</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
-    <UAVariable DataType="Boolean" ParentNodeId="ns=1;s=UA1_1_1" NodeId="ns=1;s=UA1_1_1.TIMEOUT" BrowseName="1:TIMEOUT" UserAccessLevel="3" AccessLevel="3">
-        <DisplayName>TIMEOUT</DisplayName>
-        <References>
-            <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=UA1_1_1</Reference>
-        </References>
-        <Value>
-            <uax:Boolean>false</uax:Boolean>
-        </Value>
-    </UAVariable>
 </UANodeSet>
