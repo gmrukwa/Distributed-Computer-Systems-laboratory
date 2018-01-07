@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Spectre.Mvvm, Version=3.0.0.72, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>packages\Spectre.Mvvm.3.0.0.72\lib\net461\Spectre.Mvvm.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -62,9 +65,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="dcs-lab.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Spectre.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
