@@ -1,4 +1,5 @@
 ﻿using AssemblyStationClient.Controlling;
+﻿using System.Diagnostics;
 using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StateMachine
@@ -7,6 +8,7 @@ namespace AssemblyStationClient.StateMachine
     {
         protected AssemblyStationState(ControlService controlService)
         {
+            Debug.WriteLine(GetType().Name);
             ControlService = controlService;
         }
 
