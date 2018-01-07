@@ -117,7 +117,9 @@ namespace PolslMacrocourse.DcsLab
                 TypeNamespaceIndex = DefaultNamespaceIndex;
 
                 var controllers = _directory.Get(ObjectIds.Controllers);
-                var station = _factory.Create("UA2_1_1", controllers);
+                var station1 = _factory.Create("AS1_1_1", controllers);
+                var station2 = _factory.Create("AS21_1_1", controllers);
+                var station3 = _factory.Create("AS2_1_1", controllers);
             }
             catch (Exception e)
             {
