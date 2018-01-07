@@ -7,7 +7,9 @@ namespace AssemblyStationClient.StationAutomation
 {
     public class IdleState: AssemblyStationState
     {
-        public IdleState(ControlService controlService) : base(controlService) { }
+        public IdleState(AssemblyStationState previous) : base(previous) { }
+
+        public IdleState(ControlService controlService, AssemblyStationVm vm) : base(controlService, vm) { }
 
         public override bool ChangesState(AssemblyStationVm vm, string updatedPropertyName)
         {
@@ -17,14 +19,14 @@ namespace AssemblyStationClient.StationAutomation
         public override IState<AssemblyStationVm> GetNext(AssemblyStationVm vm, string updatedPropertyName)
         {
             if(vm.Intervention)
-                return new InterventionState(ControlService);
+                return new InterventionState(this);
             if (vm.Alarm)
-                return new AlarmState(ControlService);
+                return new AlarmState(this);
             if (vm.Excluded)
-                return new ExcludedState(ControlService);
+                return new ExcludedState(this);
             if (!vm.StInput)
                 return this;
-            return new WorkingState(ControlService);
+            return new WorkingState(this);
         }
     }
 }

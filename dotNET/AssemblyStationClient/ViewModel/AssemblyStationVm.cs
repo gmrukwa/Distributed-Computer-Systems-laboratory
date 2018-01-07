@@ -23,7 +23,7 @@ namespace AssemblyStationClient.ViewModel
             // SimulationService: gets updates through PropertyChangedNotification, acts through ControlService
             _monitorService = new MonitorService(session, this, namespaceName);
             _controlService = new ControlService(session, this, namespaceName);
-            _simulationService = new SimulationService(this, _controlService);
+            _simulationService = new SimulationService(_controlService, this);
         }
         #endregion
 

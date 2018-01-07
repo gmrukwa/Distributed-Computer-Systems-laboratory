@@ -1,12 +1,11 @@
-﻿using AssemblyStationClient.Controlling;
-using AssemblyStationClient.StateMachine;
+﻿using AssemblyStationClient.StateMachine;
 using AssemblyStationClient.ViewModel;
 
 namespace AssemblyStationClient.StationAutomation
 {
     public class BlockedState : AssemblyStationState
     {
-        public BlockedState(ControlService controlService) : base(controlService)
+        public BlockedState(AssemblyStationState previous) : base(previous)
         {
             ControlService.Write("BLOCKED", true);
         }
@@ -20,7 +19,10 @@ namespace AssemblyStationClient.StationAutomation
         {
             ControlService.Write("BLOCKED", false);
             ControlService.Write("ST_OUTPUT", true);
-            return new IdleState(ControlService);
+            if (vm.StInput)
+                return new WorkingState(this);
+            else
+                return new IdleState(this);
         }
     }
 }

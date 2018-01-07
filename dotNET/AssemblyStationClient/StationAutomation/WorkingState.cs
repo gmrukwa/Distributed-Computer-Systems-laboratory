@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using AssemblyStationClient.Controlling;
 using AssemblyStationClient.StateMachine;
 using AssemblyStationClient.ViewModel;
 
@@ -11,11 +11,12 @@ namespace AssemblyStationClient.StationAutomation
 {
     public class WorkingState : AssemblyStationState, IDisposable
     {
-        public WorkingState(ControlService controlService) : base(controlService)
+        public WorkingState(AssemblyStationState previous) : base(previous)
         {
             ControlService.Write("ST_INPUT", false);
             ControlService.Write("RUN", true);
             var workingTime = (byte) new Random().Next(10, 51);
+            Debug.WriteLine($"Working time: {workingTime}s");
             _tokenSource = new CancellationTokenSource();
             _cancellationToken = _tokenSource.Token;
             _stationRunner = new Task(() => DoStationWork(workingTime), _cancellationToken);
@@ -30,12 +31,16 @@ namespace AssemblyStationClient.StationAutomation
         public override IState<AssemblyStationVm> GetNext(AssemblyStationVm vm, string updatedPropertyName)
         {
             if (vm.Intervention)
-                return new InterventionState(ControlService);
-            if (vm.StOutput)    
-                return new BlockedState(ControlService);
-            if (vm.Run)
+                return new InterventionState(this);
+            if (updatedPropertyName == "Blocked" || vm.Blocked)
+                return new BlockedState(this);
+            if (updatedPropertyName == "Run" && vm.Run)
                 return this;
-            return new IdleState(ControlService);
+            if (updatedPropertyName == "StOutput")
+                return this;
+            if (updatedPropertyName == "Run" && vm.StInput && !vm.Blocked)
+                return new WorkingState(this);
+            return new IdleState(this);
         }
 
         private void DoStationWork(byte workingTime)
@@ -52,10 +57,10 @@ namespace AssemblyStationClient.StationAutomation
                     ControlService.Write("TIMEOUT", true);
                 }
             }
-            ControlService.Write("RUN", false);
-            ControlService.Write("TIMEOUT", false);
             if (!_cancellationToken.IsCancellationRequested)
-                ControlService.Write("ST_OUTPUT", true);
+                ControlService.Write(AssemblyStationVm.StOutput ? "BLOCKED" : "ST_OUTPUT", true);
+            ControlService.Write("TIMEOUT", false);
+            ControlService.Write("RUN", false);
         }
 
         #region IDisposable

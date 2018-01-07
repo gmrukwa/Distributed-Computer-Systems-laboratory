@@ -8,9 +8,9 @@ namespace AssemblyStationClient.StationAutomation
     /// </summary>
     class SimulationService
     {
-        public SimulationService(AssemblyStationVm vm, ControlService controlService)
+        public SimulationService(ControlService controlService, AssemblyStationVm vm)
         {
-            var state = new IdleState(controlService);
+            var state = new IdleState(controlService, vm);
             vm.PropertyChanged += state.Notify;
         }
     }
