@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PolslMacrocourse.DcsLab.StationAutomation;
 using Spectre.Mvvm.Base;
 using UnifiedAutomation.UaBase;
 
@@ -14,7 +10,8 @@ namespace PolslMacrocourse.DcsLab.Abstraction
         #region Constructor
         public AssemblyStation(ObjectNode node, DcsLabNodeManager nodeManager)
         {
-            
+            _simulation = new SimulationService(this);
+            // TODO: Add update on the server for each change notification
         }
         #endregion
 
@@ -83,6 +80,8 @@ namespace PolslMacrocourse.DcsLab.Abstraction
         #endregion
 
         #region Privates
+
+        private readonly SimulationService _simulation;
 
         #endregion
     }
