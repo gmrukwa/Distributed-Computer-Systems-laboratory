@@ -15,7 +15,7 @@ namespace PolslMacrocourse.DcsLab.StationAutomation
         {
             AssemblyStation.StInput = false;
             AssemblyStation.Run = true;
-            var workingTime = (byte) new Random().Next(10, 51);
+            var workingTime = (byte) new Random().Next(30, 61);
             Debug.WriteLine($"Working time: {workingTime}s");
             _tokenSource = new CancellationTokenSource();
             _cancellationToken = _tokenSource.Token;
@@ -99,7 +99,7 @@ namespace PolslMacrocourse.DcsLab.StationAutomation
         #endregion
 
         private static readonly IEnumerable<string> TransitionVariables = new[] { "Intervention", "Alarm", "Run" };
-        private const byte TimeoutTime = 60;
+        private const byte TimeoutTime = 45;
         private readonly Task _stationRunner;
         private readonly CancellationToken _cancellationToken;
         private readonly CancellationTokenSource _tokenSource;
