@@ -12,6 +12,7 @@ namespace PolslMacrocourse.DcsLab.Abstraction
         {
             _simulation = new SimulationService(this);
             // TODO: Add update on the server for each change notification
+            // TODO: Add notification for update through client
         }
         #endregion
 
