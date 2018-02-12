@@ -29,6 +29,12 @@ namespace PolslMacrocourse.DcsLab.Abstraction
                 TypeDefinitionId = new NodeId(PolslMacrocourse.DcsLab.ObjectTypes.AssemblyStationType, _nodeManager.TypeNamespaceIndex)
             };
             var node = _nodeManager.CreateObject(_nodeManager.Server.DefaultRequestContext, settings);
+            
+
+            var station = new AssemblyStation(node, _nodeManager);
+
+            var setters = makeSetters(station);
+            var getters = makeGetters(station);
 
             foreach (var variableName in variables)
             {
@@ -36,11 +42,11 @@ namespace PolslMacrocourse.DcsLab.Abstraction
                     node.NodeId,
                     new QualifiedName(variableName, _nodeManager.TypeNamespaceIndex),
                     NodeHandleType.ExternalPolled,
-                    name + "_" + variableName
+                    new Tuple<Func<object>, Action<object>>(getters[variableName], setters[variableName])
                 );
             }
 
-            return new AssemblyStation(node, _nodeManager);
+            return station;
         }
 
         private readonly DcsLabNodeManager _nodeManager;
@@ -58,5 +64,37 @@ namespace PolslMacrocourse.DcsLab.Abstraction
             "RUN",
             "TIMEOUT",
         };
+        
+        private Dictionary<string, Action<object>> makeSetters(AssemblyStation station)
+        {
+            return new Dictionary<string, Action<object>>(){
+                {"ST_INPUT", v => station.StInput = (bool)v},
+                {"ST_OUTPUT", v => station.StOutput = (bool)v},
+                {"CYCLE_TIME", v => station.CycleTime = (byte)v},
+                {"ALARM", v => station.Alarm = (bool)v},
+                {"BLOCKED", v => station.Blocked = (bool)v},
+                {"EMPTY", v => station.Empty = (bool)v},
+                {"EXCLUDED", v => station.Excluded = (bool)v},
+                {"INTERVENTION", v => station.Intervention = (bool)v},
+                {"RUN", v => station.Run = (bool)v},
+                {"TIMEOUT", v => station.Timeout = (bool)v},
+            };
+        }
+
+        private Dictionary<string, Func<object>> makeGetters(AssemblyStation station)
+        {
+            return new Dictionary<string, Func<object>>(){
+                {"ST_INPUT", () => station.StInput},
+                {"ST_OUTPUT", () => station.StOutput},
+                {"CYCLE_TIME", () => station.CycleTime},
+                {"ALARM", () => station.Alarm},
+                {"BLOCKED", () => station.Blocked},
+                {"EMPTY", () => station.Empty},
+                {"EXCLUDED", () => station.Excluded},
+                {"INTERVENTION", () => station.Intervention},
+                {"RUN", () => station.Run},
+                {"TIMEOUT", () => station.Timeout},
+            };
+        }
     }
 }
