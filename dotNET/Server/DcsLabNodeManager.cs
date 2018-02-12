@@ -48,6 +48,7 @@ using System.Threading;
 using System.IO;
 using System.Reflection;
 using PolslMacrocourse.DcsLab.Abstraction;
+using PolslMacrocourse.DcsLab.StationAutomation;
 using UnifiedAutomation.UaBase;
 using UnifiedAutomation.UaServer;
 namespace PolslMacrocourse.DcsLab
@@ -120,6 +121,13 @@ namespace PolslMacrocourse.DcsLab
                 var station1 = _factory.Create("AS1_1_1", controllers);
                 var station2 = _factory.Create("AS21_1_1", controllers);
                 var station3 = _factory.Create("AS2_1_1", controllers);
+
+                _simulations = new []
+                {
+                    new SimulationService(station1),
+                    new SimulationService(station2),
+                    new SimulationService(station3),
+                };
             }
             catch (Exception e)
             {
@@ -238,6 +246,7 @@ namespace PolslMacrocourse.DcsLab
 
         private readonly DirectoryManager _directory;
         private readonly AssemblyStationFactory _factory;
+        private SimulationService[] _simulations;
 
         #endregion
     }
