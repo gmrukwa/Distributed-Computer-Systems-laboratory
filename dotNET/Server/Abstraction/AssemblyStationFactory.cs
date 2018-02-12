@@ -29,9 +29,34 @@ namespace PolslMacrocourse.DcsLab.Abstraction
                 TypeDefinitionId = new NodeId(PolslMacrocourse.DcsLab.ObjectTypes.AssemblyStationType, _nodeManager.TypeNamespaceIndex)
             };
             var node = _nodeManager.CreateObject(_nodeManager.Server.DefaultRequestContext, settings);
+
+            foreach (var variableName in variables)
+            {
+                _nodeManager.SetVariableConfiguration(
+                    node.NodeId,
+                    new QualifiedName(variableName, _nodeManager.TypeNamespaceIndex),
+                    NodeHandleType.ExternalPolled,
+                    name + "_" + variableName
+                );
+            }
+
             return new AssemblyStation(node, _nodeManager);
         }
 
         private readonly DcsLabNodeManager _nodeManager;
+
+        private readonly string[] variables = new string[]
+        {
+            "ST_INPUT",
+            "ST_OUTPUT",
+            "CYCLE_TIME",
+            "ALARM",
+            "BLOCKED",
+            "EMPTY",
+            "EXCLUDED",
+            "INTERVENTION",
+            "RUN",
+            "TIMEOUT",
+        };
     }
 }
